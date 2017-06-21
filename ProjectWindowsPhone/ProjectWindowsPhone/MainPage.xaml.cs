@@ -32,8 +32,7 @@ namespace ProjectWindowsPhone
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string linguagem;
-            linguagem = textBlock.Text;
+            string linguagem = textBlock.Text;
 
         }
     }
