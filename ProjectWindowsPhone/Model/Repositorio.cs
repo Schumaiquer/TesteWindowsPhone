@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Repositorio
+    public class Repositorio
     {
-        public string nomeRepositorio { get; set; }
-        public string descricao { get; set; }
-        public string nomeAutor { get; set; }
-        public string FotoAutor { get; set; }
-        public string NumeroEstrela { get; set; }
-        public string NumeroForks { get; set; }
+        public string full_name { get; set; }
+        public string description { get; set; }
+        public string name { get; set; }
+        public string avatar_url { get; set; }
+        public string stargazers_count { get; set; }
+        public string forks { get; set; }
 
     }
 }

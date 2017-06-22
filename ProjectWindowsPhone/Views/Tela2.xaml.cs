@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Model;
+using Service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +24,8 @@ namespace Views
     /// </summary>
     public sealed partial class Tela2 : Page
     {
+
+        string url = "https://api.github.com/search/repositories?q=language:";
         public Tela2()
         {
             this.InitializeComponent();
@@ -34,6 +38,24 @@ namespace Views
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+                   url = url + e.Parameter.ToString() + "&sort=stars&page=1";
+                  loadData();
+
+        }
+
+        public async void loadData()
+        {
+
+            var response = await Client.GetRepositorio(url);
+            if (response != null)
+            {
+
+                List<Repositorio> lista = response;
+                for (int i = 0; i < lista.Count; i++)
+                {
+                    listaID.Items.Add(lista[i]);
+                }
+            }
         }
     }
 }

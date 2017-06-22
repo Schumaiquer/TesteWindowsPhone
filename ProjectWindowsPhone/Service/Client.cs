@@ -4,20 +4,24 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-
+using Model;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Service
 {
-   static class Client
+   public static class Client
     {
         private static HttpClient httpClient = new HttpClient();
 
-        public static async Task<Repositorio> GetRepositorio(string uri) {
-            Repositorio repositorio = null;
+        public static async Task<List<Repositorio>> GetRepositorio(string uri) {
+            List <Repositorio> repositorio = null;
             HttpResponseMessage response = await httpClient.GetAsync(uri);
 
             if (response.IsSuccessStatusCode) {
-                repositorio = await response.Content.ReadAsAsync<Repositorio>();
+               string stringReposito = await response.Content.ReadAsStringAsync();
+                var array = JObject.Parse(stringReposito)["items"];
+                repositorio = JsonConvert.DeserializeObject<List<Repositorio>>(array.ToString());
             }
             return repositorio;
         }

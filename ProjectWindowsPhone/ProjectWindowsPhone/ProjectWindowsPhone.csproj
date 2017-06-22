@@ -80,6 +80,18 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{2f33ba25-cec1-4375-9aed-ef21c01caf89}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{15b9720f-4f51-45ba-854d-e4a985f1e67c}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Views\Views.csproj">
+      <Project>{9f31a403-d425-4d92-95a2-7c63b8ce061c}</Project>
+      <Name>Views</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">

@@ -12,7 +12,10 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
+using Model;
+using Service;
+using System.Net.Http;
+using Views;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -23,7 +26,6 @@ namespace ProjectWindowsPhone
         public MainPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
     protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -33,8 +35,9 @@ namespace ProjectWindowsPhone
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string linguagem = textBlock.Text;
-
+            string linguagem = textBox.Text;
+                Frame.Navigate(typeof(Tela2),linguagem);
+          
         }
     }
 }

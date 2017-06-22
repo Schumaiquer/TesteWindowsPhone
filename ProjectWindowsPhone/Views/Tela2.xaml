@@ -10,33 +10,62 @@
 
     <Grid>
         <ListBox Name="listaID">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
+                
                 <DataTemplate>
-                    <StackPanel Orientation="Horizontal"
-                                Background="AliceBlue"
-                                Width="420"
-                                Height="200">
+                    <Grid  Background="AliceBlue">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="200"/>
+                        </Grid.ColumnDefinitions>
+
                         <TextBlock Name="idNome"
-                                   Text="{Binding }"
-                                   Width="40"
-                                   FontSize="30"/>
+                                   Text="{Binding full_name}"                               
+                                   FontSize="10"
+                                   TextWrapping="Wrap"
+                                           Grid.Column="0"
+                                           Grid.Row="0"/>
+                        
                         <TextBlock Name="idNomeReposito"
-                                   Text="{Binding }"
-                                   Width="40"
-                                   FontSize="30"/>
+                                   Text="{Binding name}"
+                                   FontSize="10"
+                                   TextWrapping="Wrap"
+                                   Grid.Column="0"
+                                   Grid.Row="1"/>
+                        
                         <TextBlock Name="idDescriReposito"
-                                   Text="{Binding }"
-                                   Width="40"
-                                   FontSize="30"/>
+                                   Text="{Binding description}"
+                                   FontSize="10"
+                                   TextWrapping="Wrap"
+                                   Grid.Column="0"
+                                   Grid.Row="2"/>
+                        
                         <TextBlock Name="idNumeroStars"
-                                   Text="{Binding }"
-                                   Width="40"
-                                   FontSize="30"/>
+                                   Text="{Binding stargazers_count}"
+                                   FontSize="10"
+                                   TextWrapping="Wrap"
+                                   Grid.Column="1"
+                                   Grid.Row="0"/>
+                        
                         <TextBlock Name="idNumeroForks"
-                                   Text="{Binding }"
-                                   Width="40"
-                                   FontSize="30"/>
-                    </StackPanel>
+                                   Text="{Binding forks}"
+                                   FontSize="10"
+                                   TextWrapping="Wrap"
+                                   Grid.Column="1"
+                                   Grid.Row="1"/>
+                    </Grid>
+                    
                 </DataTemplate>
             </ListBox.ItemTemplate>
 
