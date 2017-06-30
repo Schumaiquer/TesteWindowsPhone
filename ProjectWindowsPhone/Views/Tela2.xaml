@@ -9,61 +9,71 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListBox Name="listaID">
+        <ListBox Name="listaID" Background="Black">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                 </Style>
             </ListBox.ItemContainerStyle>
             <ListBox.ItemTemplate>
-                
                 <DataTemplate>
                     <Grid  Background="AliceBlue">
-
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="10"/>
-                            <RowDefinition Height="50"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
+                            <RowDefinition Height="15"/>
                         </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="200"/>
-                            <ColumnDefinition Width="200"/>
-                        </Grid.ColumnDefinitions>
 
-                        <TextBlock Name="idNome"
+                        <Grid Grid.Row="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Nome: " Grid.Row="0" FontSize="10"/>
+                            <TextBlock Name="idNome" Grid.Row="0" Grid.Column="1"
                                    Text="{Binding full_name}"                               
                                    FontSize="10"
-                                   TextWrapping="Wrap"
-                                           Grid.Column="0"
-                                           Grid.Row="0"/>
-                        
-                        <TextBlock Name="idNomeReposito"
+                                   TextWrapping="Wrap"/>
+                        </Grid>
+
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="Repositorio: " Grid.Row="0" FontSize="10"/>
+                            <TextBlock Name="idNomeReposito" Grid.Row="0" Grid.Column="1"
                                    Text="{Binding name}"
                                    FontSize="10"
-                                   TextWrapping="Wrap"
-                                   Grid.Column="0"
-                                   Grid.Row="1"/>
-                        
-                        <TextBlock Name="idDescriReposito"
+                                   TextWrapping="Wrap"/>
+                        </Grid>
+
+                      
+
+                        <TextBlock Name="idDescriReposito" Grid.Row="2"
                                    Text="{Binding description}"
                                    FontSize="10"
-                                   TextWrapping="Wrap"
-                                   Grid.Column="0"
-                                   Grid.Row="2"/>
-                        
-                        <TextBlock Name="idNumeroStars"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Name="idNumeroStars" Grid.Row="3"
                                    Text="{Binding stargazers_count}"
                                    FontSize="10"
-                                   TextWrapping="Wrap"
-                                   Grid.Column="1"
-                                   Grid.Row="0"/>
-                        
-                        <TextBlock Name="idNumeroForks"
+                                   TextWrapping="Wrap"/>
+
+                        <TextBlock Name="idNumeroForks" Grid.Row="4"
                                    Text="{Binding forks}"
                                    FontSize="10"
-                                   TextWrapping="Wrap"
-                                   Grid.Column="1"
-                                   Grid.Row="1"/>
+                                   TextWrapping="Wrap"/>
                     </Grid>
                     
                 </DataTemplate>
