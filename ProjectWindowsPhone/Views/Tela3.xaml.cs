@@ -1,4 +1,5 @@
 ﻿using Model;
+using Service;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -30,12 +31,19 @@ namespace Views
         {
             Repositorio result = e.Parameter as Repositorio;
             String url = "https://api.github.com/repos/" +result.owner.login + "/" + result.name + "/pulls";
-            loadData();
+            loadData(url);
         }
-
-        private void loadData()
+        
+        private async void loadData(string url)
         {
-            throw new NotImplementedException();
-        }
+ 
+            var result = await Client.GetPull(url);
+            List<Pull> items = result;
+
+            for (int i = 0; i < items.Count; i++)
+            {
+                lista2ID.Items.Add(items[i]);
+            }
+        } 
     }
 }

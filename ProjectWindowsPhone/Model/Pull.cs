@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Pull
+    public class Pull
     {
         public string title { get; set; }
         public string updated_at { get; set; }

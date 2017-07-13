@@ -51,7 +51,7 @@
                    FontSize="15" TextWrapping="Wrap"/>
 
                         <TextBlock Text="Diretorio nome" Grid.Row="2" Grid.Column="1" 
-                   FontSize="20" HorizontalAlignment="Center"/>
+                   FontSize="20" TextWrapping="Wrap" Width="270"/>
 
                         <Grid Grid.Row="3" Grid.Column="1">
                             <Grid.ColumnDefinitions>

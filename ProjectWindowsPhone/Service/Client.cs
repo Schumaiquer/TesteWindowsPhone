@@ -26,5 +26,18 @@ namespace Service
             return repositorio;
         }
 
+        public static async Task<List<Pull>> GetPull(string uri){
+            List<Pull> pull = null;
+            HttpResponseMessage response = await httpClient.GetAsync(uri);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string stringReposito = await response.Content.ReadAsStringAsync();
+                var array = JObject.Parse(stringReposito)["items"];
+                pull = JsonConvert.DeserializeObject<List<Pull>>(array.ToString());
+            }
+            return pull;
         }
+
+    }
  }
