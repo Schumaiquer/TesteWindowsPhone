@@ -32,7 +32,7 @@
                 VerticalAlignment="Top"/>
 
         <Image 
-               Source="..\Assets\pBeeJQDQ.png"          
+               Source="Assets/pBeeJQDQ.png"          
                HorizontalAlignment="Left" 
                Height="146" 
                Margin="139,78,0,0" 
