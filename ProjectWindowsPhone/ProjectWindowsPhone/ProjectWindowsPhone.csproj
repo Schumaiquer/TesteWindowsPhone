@@ -108,7 +108,8 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\estrela.jpg" />
+    <Content Include="Assets\estrela.png" />
+    <Content Include="Assets\forks.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\pBeeJQDQ.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />
