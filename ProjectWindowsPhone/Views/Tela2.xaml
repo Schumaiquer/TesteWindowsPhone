@@ -25,7 +25,7 @@
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="150"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
 
@@ -33,7 +33,7 @@
               Source="{Binding owner.image}" />
 
                         <TextBlock FontSize="20" HorizontalAlignment="Center" 
-                   Text="{Binding full_name}" TextWrapping="Wrap" Grid.Row="2" Grid.Column="0" />
+                   Text="{Binding owner.login}" TextWrapping="Wrap" Grid.Row="2" Grid.Column="0" />
 
                         <Grid Grid.Row="3">
                             <Grid.RowDefinitions>

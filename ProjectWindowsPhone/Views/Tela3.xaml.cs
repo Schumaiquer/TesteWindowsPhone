@@ -30,7 +30,7 @@ namespace Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Repositorio result = e.Parameter as Repositorio;
-            String url = "https://api.github.com/repos/" +result.owner.login + "/" + result.name + "/pulls";
+            String url = "https://api.github.com/repos/"+result.owner.login+"/"+result.name+"/pulls";
             loadData(url);
         }
         
