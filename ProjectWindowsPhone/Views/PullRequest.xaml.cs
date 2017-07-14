@@ -20,14 +20,13 @@ using Windows.UI.Xaml.Navigation;
 
 namespace Views
 {
-    public sealed partial class Tela3 : Page
+    public sealed partial class PullRequest : Page
     {
-        public Tela3()
+        public PullRequest()
         {
             this.InitializeComponent();
         }
-
-        
+  
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             Repositorio result = e.Parameter as Repositorio;
@@ -37,7 +36,6 @@ namespace Views
         
         private async void loadData(string url)
         {
- 
             var result = await Client.GetPull(url);
             if (result != null)
             {

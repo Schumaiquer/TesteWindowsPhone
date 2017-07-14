@@ -36,7 +36,7 @@ namespace ProjectWindowsPhone
         private void button_Click(object sender, RoutedEventArgs e)
         {
             string linguagem = textBox.Text;
-                Frame.Navigate(typeof(Tela2),linguagem);
+                Frame.Navigate(typeof(LanguageSearch),linguagem);
           
         }
     }

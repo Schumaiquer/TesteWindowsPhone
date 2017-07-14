@@ -80,29 +80,22 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Page Include="BlankPage1.xaml">
+    <Page Include="LanguageSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tela2.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Tela3.xaml">
+    <Page Include="PullRequest.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlankPage1.xaml.cs">
-      <DependentUpon>BlankPage1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tela2.xaml.cs">
-      <DependentUpon>Tela2.xaml</DependentUpon>
+    <Compile Include="LanguageSearch.xaml.cs">
+      <DependentUpon>LanguageSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Tela3.xaml.cs">
-      <DependentUpon>Tela3.xaml</DependentUpon>
+    <Compile Include="PullRequest.xaml.cs">
+      <DependentUpon>PullRequest.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

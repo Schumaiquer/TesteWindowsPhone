@@ -33,8 +33,8 @@ namespace Service
             if (response.IsSuccessStatusCode)
             {
                 string stringReposito = await response.Content.ReadAsStringAsync();
-                var array = JObject.Parse(stringReposito)["items"];
-                pull = JsonConvert.DeserializeObject<List<Pull>>(array.ToString());
+                
+                pull = JsonConvert.DeserializeObject<List<Pull>>(stringReposito);
             }
             return pull;
         }
