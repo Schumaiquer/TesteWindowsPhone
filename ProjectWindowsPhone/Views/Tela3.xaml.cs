@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -48,10 +49,14 @@ namespace Views
             }
         }
 
-        private void lista2ID_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void lista2ID_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var selectIten = lista2ID.SelectedItem as Repositorio;
-
+            await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
+            {
+                Pull pull = lista2ID.SelectedItem as Pull;       
+             Windows.System.Launcher.LaunchUriAsync(new System.Uri(pull.html_url));
+            });
         }
+
     }
 }
