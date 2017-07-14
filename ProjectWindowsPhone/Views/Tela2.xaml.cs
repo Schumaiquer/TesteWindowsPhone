@@ -57,10 +57,13 @@ namespace Views
             }
         }
 
+        
         private void listaID_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var selectIten = listaID.SelectedItem as Repositorio;
             Frame.Navigate(typeof(Tela3), selectIten);
+
+
         }
     }
 }
