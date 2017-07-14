@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <ListBox Name="lista2ID" Background="White">
+        <ListBox Name="lista2ID" Background="White" SelectionChanged="lista2ID_SelectionChanged">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -32,10 +32,10 @@
               Source="{Binding user.image}" />
 
             <TextBlock FontSize="20" HorizontalAlignment="Center" 
-                   Text="{Binding user.login}" Width="130" Grid.Row="0" Grid.Column="0" />
+                   Text="{Binding user.login}" Width="130" TextWrapping="Wrap" Grid.Row="0" Grid.Column="0" />
             
             <TextBlock FontSize="15" HorizontalAlignment="Center" 
-                   Text="{Binding title}" Width="260" Grid.Row="0" Grid.Column="1" />
+                   Text="{Binding title}" Width="260" TextWrapping="Wrap" Grid.Row="0" Grid.Column="1" />
             
             <TextBlock Width="270" Grid.Row="1" Grid.Column="1"
                     Text="{Binding body}"

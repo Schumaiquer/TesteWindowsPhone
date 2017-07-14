@@ -38,12 +38,20 @@ namespace Views
         {
  
             var result = await Client.GetPull(url);
-            List<Pull> items = result;
-
-            for (int i = 0; i < items.Count; i++)
+            if (result != null)
             {
-                lista2ID.Items.Add(items[i]);
+                List<Pull> items = result;
+                for (int i = 0; i < items.Count; i++)
+                {
+                    lista2ID.Items.Add(items[i]);
+                }
             }
-        } 
+        }
+
+        private void lista2ID_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectIten = lista2ID.SelectedItem as Repositorio;
+
+        }
     }
 }

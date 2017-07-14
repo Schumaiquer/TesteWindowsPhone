@@ -49,7 +49,6 @@ namespace Views
             var response = await Client.GetRepositorio(url);
             if (response != null)
             {
-
                 List<Repositorio> lista = response;
                 for (int i = 0; i < lista.Count; i++)
                 {
@@ -63,6 +62,5 @@ namespace Views
             var selectIten = listaID.SelectedItem as Repositorio;
             Frame.Navigate(typeof(Tela3), selectIten);
         }
-     
     }
 }
